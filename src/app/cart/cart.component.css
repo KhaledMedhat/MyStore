@@ -1,0 +1,109 @@
+
+img { 
+    width: 20%;
+    position: relative;
+    left: 40px;
+    border-radius: 2.5rem;
+    
+}
+
+.container { 
+    position: relative;
+    left: 30%;
+    top: 15rem;
+}
+
+.name {
+    position: relative;
+    bottom: 15rem;
+    left: 35%;
+}
+
+.qty {
+    position: relative;
+    bottom: 15rem;
+    left: 35%;
+}
+
+.price {
+    position: relative;
+    bottom: 15rem;
+    left: 35%;
+
+}
+
+.amount {
+    position: relative;
+    bottom: 15rem;
+    left: 35%;
+
+}
+
+.Dbutton{ 
+    position: relative;
+    bottom: 12rem;
+    right: 4rem;
+    left: 27.5%;
+    border: none;
+    outline: 0;
+    padding: 7px;
+    color: white;
+    background-color: #8B0000;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.total { 
+    margin-bottom: 30px;
+}
+ 
+.final {
+  
+    position: relative;
+    bottom: 20px;
+    margin-top: 15%;
+    left: 45%;
+}
+
+.Sbutton {
+    border: none;
+    outline: 0;
+    padding: 7px;
+    color: white;
+    background-color: #8B0000;
+    text-align: center;
+    cursor: pointer;
+   
+}
+
+.Ebutton {
+    border: none;
+    outline: 0;
+    padding: 7px;
+    color: white;
+    background-color: #8B0000;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 46%;
+}
+
+.up {
+    position: relative;
+    top: 10px;
+    background:#8B0000 ;
+    border: none;
+    border-radius: 0.5rem;
+    width: 5rem;
+    color: white;
+}
+
+.down {
+    position: relative;
+    bottom: 10px;
+    background:#8B0000 ;
+    border: none;
+    border-radius: 0.5rem;
+    width: 5rem;
+    color: white;
+}

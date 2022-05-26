@@ -1,0 +1,18 @@
+<div ng-repeat="details in detailsList" *ngFor="let details of itemDetails">
+    <div class="container">
+    <div>
+        <img src="{{details.url}}" alt="">
+    </div>
+    <div>
+        <h1 class="name">Product Name : {{details.name}}</h1>
+        <p class="price">Product Price : {{details.price}}$</p>
+        <p class="description">Product Description : {{details.description}}</p>
+
+    
+        <p><button class="Abutton" (click)="addToCart(details)">Add to Cart</button></p>
+
+        <a class="return" routerLink="/">Back to product list</a>
+    </div>
+</div>
+
+</div>

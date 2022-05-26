@@ -1,0 +1,15 @@
+<div>
+    <h1>Shipping Information</h1>
+  <form #form="ngForm" class="form" (ngSubmit)="onSubmit()"  ngNativeValidate>
+      <label for="fullname" >Full name:</label>
+      <input  name="fullname" required minlength="3" type="text" placeholder="(minimum 3 characters)" [(ngModel)]="fullname" (ngModelChange)="validateName($event)"><br><br>
+      <p [hidden]="is_valid">Full name requires more than 3 characters</p>
+      <label for="address">Address</label>
+      <input  name="address" required minlength="4" maxlength="10" type="text" placeholder="(minimum 6 characters)" [(ngModel)]="address" (ngModelChange)="validateAddress($event)"><br><br>
+      <p [hidden]="is_valid2">Address requires from 4-10 characters</p>
+      <label for="credit-card-number">Credit card number</label>
+      <input  name="credit-card-number" required minlength="16" maxlength="16" type="text" placeholder="(16-digit number)" pattern="[0-9]*" (ngModelChange)="validateCredit($event)" ><br><br>
+      <p [hidden]="is_valid3">Credit card number requires 16 digit numbers</p>
+      <input  type="submit" value="Submit" [disabled]="!is_valid" [disabled]="!is_valid2" [disabled]="!is_valid3">
+    </form>
+  </div>

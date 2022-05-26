@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family:  "Papyrus", "Copperplate", fantasy;
+    font-variant: small-caps;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+button:hover {
+    opacity: 0.7;
+  }
+
+
+  ul {
+    list-style: none
+}

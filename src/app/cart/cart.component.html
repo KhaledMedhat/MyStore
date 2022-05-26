@@ -1,0 +1,37 @@
+
+<div class="whole">
+    <div class="container">
+<ul *ngFor="let cart of cartItems">
+    <li >
+      <img  src="{{cart.url}}" alt="">
+    </li>
+    <li class="name" >
+     Product Name : {{cart.name}}
+    </li>
+    <li class="price" >
+      Product Price :{{cart.price | currency }} 
+   <div>
+      <button class="up" (click)="upQty(cart)">+</button>
+      <p >Amount : {{ cart.qty }}</p>
+      <button class="down" (click)="downQty(cart)">-</button>
+    </div>
+
+    </li>
+
+  <button class="Dbutton" (click)="removeItem(cart)" >Delete</button>
+
+  </ul>
+  
+</div>
+ 
+<div class="final">
+
+
+
+    
+      <h1 class="total">Total : {{total ? total : normalPrice  | currency}}</h1>
+
+<button (click)="onClick()" class="Sbutton" >Shipping details</button>
+
+</div>
+<button class="Ebutton" (click)="removeCart()" >Empty cart</button>

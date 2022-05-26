@@ -1,0 +1,41 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    grid-row-gap: 24px;
+   
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10rem;
+   
+    
+   
+}
+
+.card {
+     
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);  
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+    
+  }
+
+   .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #8B0000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+ 

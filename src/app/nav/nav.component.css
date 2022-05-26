@@ -1,0 +1,45 @@
+
+.nav { 
+    position: absolute;
+    left: 45.5%;
+    top: 4%;
+    
+   
+    
+}
+
+h1{
+    font-family:  "Papyrus", "Copperplate", fantasy;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: black;
+}
+
+.links {
+    font-family:  "Papyrus", "Copperplate", fantasy;
+    font-variant: small-caps;
+    font-weight: bold;
+    text-decoration: none;
+    
+   
+    
+}
+
+.container {
+    position: absolute;
+    left: 103%;
+    top: 80%;
+    background:#8B0000 ;
+    width: 10%;
+    padding-left: 10px;
+    border-radius: 7px;
+    color: white;
+
+    
+}
+
+a {
+    color: black;
+}
+
+

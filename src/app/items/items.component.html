@@ -1,0 +1,14 @@
+
+    <div class="container">
+<div class="card" *ngFor="let items of items">
+
+   <a (click)="displayDetails(items)" routerLink="/details"> <img src="{{items.url}}" style="width:100% ;"></a>
+    <h1>{{items.name}}</h1>
+    <p>{{items.price | currency}}</p>
+
+  <p> <button (click)="addToCart(items)" >Add To Cart</button></p> 
+
+
+</div>
+</div>
+

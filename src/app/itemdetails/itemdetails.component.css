@@ -1,0 +1,65 @@
+img { 
+    width: 20%;
+    position: relative;
+    left: 40px;
+    border-radius: 2.5rem;
+}
+
+.container { 
+    position: absolute;
+    left: 30%;
+    top: 25%;
+}
+
+.description {
+    position: relative;
+    bottom: 15rem;
+    left: 35%;
+}
+
+.name {
+    position: relative;
+    bottom: 15rem;
+    left: 35%;
+}
+
+.qty {
+    position: relative;
+    bottom: 15rem;
+    left: 35%;
+}
+
+.price {
+    position: relative;
+    bottom: 15rem;
+    left: 35%;
+
+}
+
+.amount {
+    position: relative;
+    bottom: 15rem;
+    left: 35%;
+
+}
+
+.Abutton {
+    position: relative;
+    bottom: 12rem;
+    right: 4rem;
+    left: 35%;
+    border: none;
+    outline: 0;
+    padding: 7px;
+    color: white;
+    background-color: #8B0000;
+    text-align: center;
+    cursor: pointer;
+}
+
+.return {
+    position: relative;
+    left: 35%;
+    bottom: 10rem;
+    text-decoration: underline;
+}

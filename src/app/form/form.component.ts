@@ -9,20 +9,21 @@ import { Router } from '@angular/router';
 export class FormComponent implements OnInit {
   fullname: string;
   address: string;
-  creditCardNumber: string;
+
   is_valid: boolean = false;
   is_valid2: boolean = false;
-  is_valid3: boolean = false;
 
   constructor(private router: Router) {}
-  @Output() event = new EventEmitter<string>();
+  @Output() event_submite_form = new EventEmitter<any>();
 
   ngOnInit(): void {}
 
   onSubmit() {
-    this.event.emit(this.fullname);
-    this.event.emit(this.address);
-    this.router.navigate(['/confirmation']);
+    let form_info = {
+      fullname: this.fullname,
+      address: this.address,
+    };
+    this.event_submite_form.emit(form_info);
   }
 
   validateName($event) {
@@ -30,9 +31,6 @@ export class FormComponent implements OnInit {
   }
   validateAddress($event) {
     this.check_validationAddress();
-  }
-  validateCredit($event) {
-    this.check_validationCredit();
   }
 
   check_validationName() {
@@ -48,14 +46,6 @@ export class FormComponent implements OnInit {
       this.is_valid2 = true;
     } else {
       this.is_valid2 = false;
-    }
-  }
-
-  check_validationCredit() {
-    if (this.creditCardNumber.length == 16) {
-      this.is_valid3 = true;
-    } else {
-      this.is_valid3 = false;
     }
   }
 }

@@ -10,9 +10,10 @@ import { NavComponent } from './nav/nav.component';
 import { ItemdetailsComponent } from './itemdetails/itemdetails.component';
 import { FormComponent } from './form/form.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
-  declarations: [AppComponent, ItemsComponent, CartComponent, NavComponent, ItemdetailsComponent, FormComponent, ConfirmationComponent],
+  declarations: [AppComponent, ItemsComponent, CartComponent, NavComponent, ItemdetailsComponent, FormComponent, ConfirmationComponent, PaymentComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

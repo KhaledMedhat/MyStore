@@ -10,20 +10,21 @@ import { Router } from '@angular/router';
 })
 export class CartComponent implements OnInit {
   cartItems: product[] = [];
-  total: any;
-  normalPrice: any;
+  total_selected_items: number = 0;
+  single_item_price: number = 0;
+  total_price: number = 0;
   constructor(private serviceService: ServiceService, private router: Router) {}
 
   ngOnInit(): void {
     this.serviceService.getProductData().subscribe((data) => {
       this.cartItems = data;
-      this.normalPrice = this.serviceService.getTotalAmount();
+      this.single_item_price = this.serviceService.getTotalAmount();
+      this.total_price = this.single_item_price;
+
       for (let index = 0; index < data.length; index++) {
         const cartItems = data[index];
         cartItems['qty'] = 1;
       }
-      // this.total = this.serviceService.getTotalAmount();
-      // console.log(this.total);
     });
   }
 
@@ -36,38 +37,36 @@ export class CartComponent implements OnInit {
     this.serviceService.removeCart();
     alert('Cart Deleted.');
   }
-  upQty(cartItems: product): void {
-    cartItems.qty += 1;
-    if (this.total == undefined) {
-      this.total = cartItems.qty * cartItems.price;
-      console.log(this.total);
-    } else {
-      if (this.cartItems.length == 1) {
-        this.total = 0;
-        this.total += cartItems.qty * cartItems.price;
-      } else {
-        this.total += cartItems.qty * cartItems.price;
+
+  upQty(selected_product: product): void {
+    for (let i = 0; i < this.cartItems.length; i++) {
+      if (this.cartItems[i].id == selected_product.id) {
+        this.cartItems[i].qty += 1;
       }
     }
+    this.calcuate_total_price();
   }
 
-  downQty(cartItems: product): void {
-    cartItems.qty -= 1;
-    if (this.total == undefined) {
-      this.total = cartItems.qty * cartItems.price;
-      console.log(this.total);
-    } else {
-      if (this.cartItems.length == 1) {
-        this.total = 0;
-        this.total -= cartItems.qty * cartItems.price;
-      } else {
-        this.total -= cartItems.qty * cartItems.price;
+  downQty(selected_product: product): void {
+    if (selected_product.qty > 1) {
+      for (let i = 0; i < this.cartItems.length; i++) {
+        if (this.cartItems[i].id == selected_product.id) {
+          this.cartItems[i].qty -= 1;
+        }
       }
-      console.log(this.total);
+    }
+    this.calcuate_total_price();
+  }
+
+  calcuate_total_price() {
+    this.total_price = 0;
+    for (let i = 0; i < this.cartItems.length; i++) {
+      this.total_price += this.cartItems[i].qty * this.cartItems[i].price;
     }
   }
 
   onClick() {
-    this.router.navigate(['/form']);
+    this.router.navigate(['/payment']);
+    this.serviceService.setData(this.total_price);
   }
 }

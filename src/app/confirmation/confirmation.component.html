@@ -1,11 +1,11 @@
-<div (event)="receiveData($event)"  class="container">
+<div  class="container">
     <h1>Success!🎉</h1>
     
-    <p >Thank you {{fullname}} .</p>
+    <p >Thank you  {{submitted_data.fullname}}.</p>
     
-    <p>Your order is confirmed!</p>
+    <p>Your {{price | currency}} order is confirmed!</p>
     
-    <p>Items will be shipped at {{address}} </p>
+    <p>Items will be shipped at {{submitted_data.address}} </p>
     
     <p>Please allow 1-3 business day(s) for shipping.</p>
     

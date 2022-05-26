@@ -8,8 +8,17 @@ import { BehaviorSubject } from 'rxjs';
 export class ServiceService {
   itemDetails: product[] = [];
   cartItems: product[] = [];
+  totalPrice: any;
   productList = new BehaviorSubject<any>([]);
   constructor() {}
+
+  setData(data) {
+    this.totalPrice = data;
+  }
+
+  getData() {
+    return this.totalPrice;
+  }
 
   getProductData() {
     return this.productList.asObservable();

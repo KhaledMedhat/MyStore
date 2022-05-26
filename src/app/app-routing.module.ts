@@ -3,8 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ItemsComponent } from './items/items.component';
 import { CartComponent } from './cart/cart.component';
 import { ItemdetailsComponent } from './itemdetails/itemdetails.component';
-import { ConfirmationComponent } from './confirmation/confirmation.component';
-import { FormComponent } from './form/form.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   {
@@ -20,12 +19,8 @@ const routes: Routes = [
     component: ItemdetailsComponent,
   },
   {
-    path: 'form',
-    component: FormComponent,
-  },
-  {
-    path: 'confirmation',
-    component: ConfirmationComponent,
+    path: 'payment',
+    component: PaymentComponent,
   },
 ];
 
